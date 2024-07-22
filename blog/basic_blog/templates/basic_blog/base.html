@@ -4,6 +4,7 @@
 
 <head>
 
+  <!-- Bootstrap CSS Import -->
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,16 +12,21 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Bootstrap CSS import done -->
 
+  <!-- Importing CSS styling snippet -->
   <link rel="stylesheet" type="text/css" href="{% static 'basic_blog/main.css' %}">
+  
   {% if title %}
   <title>Django Blog - {{ title }}</title>
   {% else %}
   <title>Django Blog</title>
   {% endif %}
+
 </head>
 
 <body>
+  <!-- Importing navbar snippet -->
   <header class="site-header">
     <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
       <div class="container">
@@ -43,7 +49,9 @@
       </div>
     </nav>
   </header>
+  <!-- Navbar snippet importing done -->
 
+  <!-- Importing main.html snippet -->
   <main role="main" class="container">
     <div class="row">
       <div class="col-md-8">
@@ -64,7 +72,9 @@
       </div>
     </div>
   </main>
+  <!-- Imported main.html snippet (this is where block 'content' goes) -->
 
+  <!-- Bootstrap JavaScript import -->
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -76,6 +86,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+  <!-- Bootstrap Javascript import over -->
 </body>
 
 </html>

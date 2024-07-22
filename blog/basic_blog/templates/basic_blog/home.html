@@ -1,6 +1,7 @@
 {% extends 'basic_blog/base.html' %}
 {% block content %}
 {% for post in posts %}
+<!-- Importing article snippet -->
 <article class="media content-section">
   <div class="media-body">
     <div class="article-metadata">
@@ -11,5 +12,6 @@
     <p class="article-content">{{ post.content }}</p>
   </div>
 </article>
+<!-- end of article snippet -->
 {% endfor %}
 {% endblock content %}
