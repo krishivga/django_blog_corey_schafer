@@ -4,6 +4,8 @@ from django.shortcuts import render
 # Allows us to send out HTTPResponses
 from django.http import HttpResponse
 
+from .models import Post
+
 
 posts = [
     {
@@ -27,7 +29,7 @@ posts = [
 def home(request):
     # We take a request from the user (which is given through urls.)
     context = {
-        'posts': posts
+        'posts': Post.objects.all()
     }
     return render(request, "basic_blog/home.html", context)
     # We return some basic HTML as a response
