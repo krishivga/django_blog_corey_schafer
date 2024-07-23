@@ -19,8 +19,10 @@ from django.contrib import admin
 # Importing path for pathing
 # Include to include the URLs inside the app URL files
 from django.urls import path, include
+from users import views as users_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),  # Admin Tools
+    path('register/', users_views.register, name="register"),
     path('', include('basic_blog.urls'))  # Blog URLs
 ]

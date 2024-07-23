@@ -1,0 +1,19 @@
+{% extends "basic_blog/base.html" %}
+{% block content %}
+<div class="content-section">
+  <form method="POST">
+    <fieldset class="form-group">
+      <legend class="border-bottom mb-4">Join today!</legend>
+      {{ form }}
+    </fieldset>
+    <div class="form-group">
+      <button class="btn btn-outline-info" type="submit">Sign Up</button>
+    </div>
+  </form>
+  <div class="border-top pt-3">
+    <smalltext class="text-muted">
+      Already have an account? <a class="ml-2" href="#">Sign In</a> <!-- Link to Sign In Page -->
+    </smalltext>
+  </div>
+</div>
+{% endblock content %}
