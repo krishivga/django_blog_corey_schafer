@@ -37,7 +37,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarToggle">
           <div class="navbar-nav mr-auto">
-            <a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a>blog-home
+            <a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a>
             <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
           </div>
           <!-- Navbar Right Side -->
@@ -55,6 +55,13 @@
   <main role="main" class="container">
     <div class="row">
       <div class="col-md-8">
+        {% if messages %}
+          {% for message in messages %}
+          <div class="alert alert-{{ message.tags }}">
+            {{ message }}
+            </div>
+          {% endfor %}
+        {% endif %}
         {% block content %}{% endblock %}
       </div>
       <div class="col-md-4">
